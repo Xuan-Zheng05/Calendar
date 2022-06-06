@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calendar</string>
+    <string name="sign_in_desc">stock_image_user</string>
+    <string name="username">User name:</string>
+    <string name="enter_name">name</string>
+    <string name="password">Password:</string>
+    <string name="password_hint">password</string>
+    <string name="submit">Submit</string>
+    <string name="new_user">New User?</string>
+</resources>
