@@ -2,6 +2,7 @@ package com.firstapp.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         new_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                switchToRegistration();
             }
         });
     }
@@ -48,5 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     public TextView getPassword() {
         return this.password;
+    }
+
+    private void switchToRegistration() {
+        Intent switchActivityIntent = new Intent(this, RegistrationActivity.class);
+        startActivity(switchActivityIntent);
     }
 }
