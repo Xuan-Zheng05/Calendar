@@ -2,4 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Calendar" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
+    <style name="BiggerCalendarText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

@@ -7,6 +7,4 @@
     <string name="password_hint">password</string>
     <string name="log_in">Log In</string>
     <string name="new_user">New User?</string>
-    <string name="back_button"><![CDATA[<-]]></string>
-    <string name="forward_button"><![CDATA[->]]></string>
 </resources>
