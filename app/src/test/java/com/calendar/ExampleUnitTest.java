@@ -1,4 +1,4 @@
-package com.firstapp.calendar;
+package com.calendar;
 
 import org.junit.Test;
 
