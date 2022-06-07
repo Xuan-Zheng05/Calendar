@@ -3,3 +3,5 @@
 *.bin
 *.probe
 .gradle
+*.bin
+*.lock
