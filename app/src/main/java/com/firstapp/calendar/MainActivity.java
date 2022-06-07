@@ -12,8 +12,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView username;
     private TextView password;
-    private Button submit;
-    private Button new_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         // initialized variables
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        submit = findViewById(R.id.submit);
-        new_user = findViewById(R.id.new_user);
+        Button log_in = findViewById(R.id.log_in);
+        Button new_user = findViewById(R.id.new_user);
 
         // button press for Submission, checks username and password
-        submit.setOnClickListener(new View.OnClickListener() {
+        log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
