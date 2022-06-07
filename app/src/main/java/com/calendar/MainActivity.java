@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     // method to switch to calendar page
     private void switchToCalendar() {
         Intent switchActivityIntent = new Intent(this, CalendarActivity.class);
+        switchActivityIntent.putExtra("name", username.getText().toString());
         startActivity(switchActivityIntent);
     }
+
+
 }
