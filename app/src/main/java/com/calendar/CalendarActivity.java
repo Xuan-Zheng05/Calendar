@@ -17,12 +17,12 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
-        TextView display_name = (TextView) findViewById(R.id.username_display);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            name = extras.getString("name");
-        }
-        display_name.setText(name);
+//        TextView display_name = (TextView) findViewById(R.id.username_display);
+//        Bundle extras = getIntent().getExtras();
+//        if (extras != null){
+//            name = extras.getString("name");
+//        }
+//        display_name.setText(name);
     }
 
     /* temp code for finding current date
