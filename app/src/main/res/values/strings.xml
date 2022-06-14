@@ -11,4 +11,6 @@
     <string name="incorrect_pass">Incorrect password</string>
     <string name="submit">Submit</string>
     <string name="confirm">Confirm:</string>
+    <string name="match_pass">Make sure both passwords are the same</string>
+    <string name="unique_user">User already exists</string>
 </resources>
