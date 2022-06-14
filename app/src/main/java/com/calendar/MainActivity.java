@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.HashMap;
 
@@ -18,20 +19,30 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView username;
     private TextView password;
-    private HashMap<String, String> temp = new HashMap<>();
+    private HashMap<String, String> users = null;
 
 
+    // gets the usernames and password of the user into a hashmap
     @Override
     protected void onStart() {
         super.onStart();
 
+        // initializes shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("user_pass",MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
 
-        String storedHashMapString = sharedPreferences.getString("hashString", "oopsDintWork");
-        java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>(){}.getType();
-        HashMap<String, String> testHashMap2 = gson.fromJson(storedHashMapString, type);
+        // gets the string using shared preferences
+        String storedHashMapString = sharedPreferences.getString("user_pass", "");
+        // checks if the file uses default value, if default, create new json file
+        if (storedHashMapString.equals("")) {
+            users = new HashMap<>();
+
+            // if not blank, then use gson to convert the string value into a hashmap
+        } else {
+            java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>(){}.getType();
+            users = gson.fromJson(storedHashMapString, type);
+        }
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 String pass_string = password.getText().toString();
 
                 // checks if username is found
-                if (temp.containsKey(username_string)) {
+                if (users.containsKey(username_string)) {
                     // checks if password is correct
-                    if (pass_string.equals(temp.get(username_string))) {
+                    if (pass_string.equals(users.get(username_string))) {
                         // switch to calendar activity
                         switchToCalendar();
                     } else {
