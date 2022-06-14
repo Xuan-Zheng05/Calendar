@@ -8,13 +8,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView username;
     private TextView password;
+    private HashMap<String, String> temp = new HashMap<>();
+
 
     @Override
+    protected void onStart() {
+        super.onStart();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("user_pass",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+
+        String storedHashMapString = sharedPreferences.getString("hashString", "oopsDintWork");
+        java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>(){}.getType();
+        HashMap<String, String> testHashMap2 = gson.fromJson(storedHashMapString, type);
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -25,19 +44,28 @@ public class MainActivity extends AppCompatActivity {
         Button log_in = findViewById(R.id.log_in);
         Button new_user = findViewById(R.id.new_user);
 
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("aaa", "abc");
-        editor.apply();
-        String temp = sharedPreferences.getString("aaa", "");
-
-
         // button press for Submission, checks username and password
         // if correct, switch to calendar view
         log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchToCalendar();
+                String username_string = username.getText().toString();
+                String pass_string = password.getText().toString();
+
+                // checks if username is found
+                if (temp.containsKey(username_string)) {
+                    // checks if password is correct
+                    if (pass_string.equals(temp.get(username_string))) {
+                        // switch to calendar activity
+                        switchToCalendar();
+                    } else {
+                        // print text if password is incorrect
+                        Toast.makeText(getApplicationContext(),R.string.no_user, Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    // could not find username, print text
+                    Toast.makeText(getApplicationContext(),R.string.incorrect_pass, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -7,4 +7,6 @@
     <string name="password_hint">password</string>
     <string name="log_in">Log In</string>
     <string name="new_user">New User?</string>
+    <string name="no_user">Username not found</string>
+    <string name="incorrect_pass">Incorrect password</string>
 </resources>
