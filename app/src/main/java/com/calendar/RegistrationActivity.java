@@ -66,24 +66,33 @@ public class RegistrationActivity extends AppCompatActivity {
                 // check if both passwords are the same
                 if (pass_string.equals(confirm_pass_string)) {
 
-                    // check if username is already in use
-                    if (!users.containsKey(pass_string)) {
-                        // put new user and password into map
-                        users.put(username_string, pass_string);
+                    // make sure password length is not 0
+                    if (pass_string.length() >= 1) {
 
-                        // change Hashmap to String
-                        String users_string = gson.toJson(users);
+                        // check if username is already in use
+                        if (!users.containsKey(pass_string)) {
+                            // put new user and password into map
+                            users.put(username_string, pass_string);
 
-                        // initialized shared preferences
-                        SharedPreferences sharedPreferences = getSharedPreferences("user_pass",MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                            // change Hashmap to String
+                            String users_string = gson.toJson(users);
 
-                        // put String of map into shared preferences
-                        editor.putString("user_pass", users_string);
-                        editor.apply();
+                            // initialized shared preferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("user_pass", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
 
+                            // put String of map into shared preferences
+                            editor.putString("user_pass", users_string);
+                            editor.apply();
+
+                            // switch to calendar activity
+                            switchToCalendar();
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), R.string.unique_user, Toast.LENGTH_SHORT).show();
+                        }
                     } else {
-                        Toast.makeText(getApplicationContext(),R.string.unique_user, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.enter_pass, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(getApplicationContext(), R.string.match_pass, Toast.LENGTH_SHORT).show();
