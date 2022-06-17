@@ -18,6 +18,7 @@ import java.util.HashMap;
 
 public class RegistrationActivity extends AppCompatActivity {
 
+    // initialized variables
     private TextView username;
     private TextView password;
     private TextView confirm_pass;
@@ -70,7 +71,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     if (pass_string.length() >= 1) {
 
                         // check if username is already in use
-                        if (!users.containsKey(pass_string)) {
+                        if (!users.containsKey(username_string)) {
                             // put new user and password into map
                             users.put(username_string, pass_string);
 
@@ -99,6 +100,10 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public TextView getUser() {
+        return this.username;
     }
 
     // method to switch to calendar page
