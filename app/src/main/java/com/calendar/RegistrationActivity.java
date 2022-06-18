@@ -1,3 +1,10 @@
+/**
+ * Name: Xuan
+ * Date: 06/06/2022
+ * Description: Java program for the registration page
+ *              Allows user to create a new account with username and password
+ */
+
 package com.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -106,8 +113,10 @@ public class RegistrationActivity extends AppCompatActivity {
         return this.username;
     }
 
-    // method to switch to calendar page
-    // also saves the username to transfer to CalendarActivity
+    /*
+     * method to switch to the calendar page
+     * also sends the name of user to CalendarActivity
+     */
     private void switchToCalendar() {
         Intent switchActivityIntent = new Intent(this, CalendarActivity.class);
         switchActivityIntent.putExtra("name", username.getText().toString());
