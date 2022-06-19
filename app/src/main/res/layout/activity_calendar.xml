@@ -28,12 +28,28 @@
 
     </LinearLayout>
 
-    <!--calendar view to show all the days of the month -->
-    <CalendarView
-        android:id="@+id/calendar"
+    <!-- event library to show all the days of the month -->
+    <com.skyhope.eventcalenderlibrary.CalenderEvent
+        android:id="@+id/calender_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dateTextAppearance="@style/BiggerCalendarText"
-    />
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/event_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
