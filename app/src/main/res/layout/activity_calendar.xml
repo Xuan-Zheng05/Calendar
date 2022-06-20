@@ -28,12 +28,44 @@
 
     </LinearLayout>
 
-    <!--calendar view to show all the days of the month -->
-    <CalendarView
-        android:id="@+id/calendar"
+    <!-- event library to show all the days of the month -->
+    <com.calendar.MyCalenderEvent
+        android:id="@+id/calender_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" >
+
+        <EditText
+            android:id="@+id/event_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="@string/enter_event"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dateTextAppearance="@style/BiggerCalendarText"
-    />
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+         >
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="@string/update"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

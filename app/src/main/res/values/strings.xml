@@ -1,10 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Calendar</string>
     <string name="sign_in_desc">stock_image_user</string>
     <string name="username">User name:</string>
     <string name="enter_name">name</string>
     <string name="password">Password:</string>
     <string name="password_hint">password</string>
+    <string name="confirm_password_hint"> Confirm password</string>
     <string name="log_in">Log In</string>
     <string name="new_user">New User?</string>
     <string name="no_user">Username not found</string>
@@ -14,4 +15,6 @@
     <string name="match_pass">Make sure both passwords are the same</string>
     <string name="unique_user">User already exists</string>
     <string name="enter_pass">Enter password</string>
+    <string name="enter_event">Enter events</string>
+    <string name="update">Update</string>
 </resources>

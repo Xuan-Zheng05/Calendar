@@ -1,3 +1,10 @@
+/**
+ * Name: Xuan
+ * Date: 06/06/2022
+ * Description: Java program for the registration page
+ *              Allows user to create a new account with username and password
+ */
+
 package com.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +25,7 @@ import java.util.HashMap;
 
 public class RegistrationActivity extends AppCompatActivity {
 
+    // initialized variables
     private TextView username;
     private TextView password;
     private TextView confirm_pass;
@@ -70,7 +78,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     if (pass_string.length() >= 1) {
 
                         // check if username is already in use
-                        if (!users.containsKey(pass_string)) {
+                        if (!users.containsKey(username_string)) {
                             // put new user and password into map
                             users.put(username_string, pass_string);
 
@@ -101,8 +109,14 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-    // method to switch to calendar page
-    // also saves the username to transfer to CalendarActivity
+    public TextView getUser() {
+        return this.username;
+    }
+
+    /*
+     * method to switch to the calendar page
+     * also sends the name of user to CalendarActivity
+     */
     private void switchToCalendar() {
         Intent switchActivityIntent = new Intent(this, CalendarActivity.class);
         switchActivityIntent.putExtra("name", username.getText().toString());

@@ -1,3 +1,10 @@
+/**
+ * Name: Xuan
+ * Date: 06/06/2022
+ * Description: Java program for the login page
+ *              Allows user to login using previously created account
+ */
+
 package com.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,10 +24,10 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    // initialized variables
     private TextView username;
     private TextView password;
     private HashMap<String, String> users = null;
-
 
     // gets the usernames and password of the user into a hashmap
     @Override
@@ -71,16 +78,17 @@ public class MainActivity extends AppCompatActivity {
                         switchToCalendar();
                     } else {
                         // print text if password is incorrect
-                        Toast.makeText(getApplicationContext(),R.string.no_user, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),R.string.incorrect_pass, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     // could not find username, print text
-                    Toast.makeText(getApplicationContext(),R.string.incorrect_pass, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),R.string.no_user, Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // button press for New User?
+        // button press if user presses New User? button
+        // switches to registration page
         new_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,22 +97,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+     * method to get the username
+     */
     public TextView getUser() {
         return this.username;
     }
 
-    public TextView getPassword() {
-        return this.password;
-    }
-
-    // method to switch to registration page
+    /*
+    * method to switch to the registration page
+     */
     private void switchToRegistration() {
         Intent switchActivityIntent = new Intent(this, RegistrationActivity.class);
         startActivity(switchActivityIntent);
     }
 
-    // method to switch to calendar page
-    // also saves the username to transfer to CalendarActivity
+    /*
+     * method to switch to the calendar page
+     * also sends the name of user to CalendarActivity
+     */
     private void switchToCalendar() {
         Intent switchActivityIntent = new Intent(this, CalendarActivity.class);
         switchActivityIntent.putExtra("name", username.getText().toString());
