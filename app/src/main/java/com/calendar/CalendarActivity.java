@@ -38,6 +38,7 @@ public class CalendarActivity extends AppCompatActivity {
 
     // initialized variables
     private HashMap<Long, String> events = new HashMap<>();
+    MyCalenderEvent calenderEvent;
     private String name = "";
     private long current_time;
     private EditText event_text;
@@ -65,6 +66,11 @@ public class CalendarActivity extends AppCompatActivity {
             java.lang.reflect.Type type = new TypeToken<HashMap<Long, String>>(){}.getType();
             events = gson.fromJson(storedHashMapString, type);
         }
+
+        for (Long key : events.keySet()) {
+            Event event = new Event(key, "o", Color.RED);
+            calenderEvent.addEvent(event);
+        }
     }
 
     @Override
@@ -87,7 +93,7 @@ public class CalendarActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         // initializes MyCalendarEvent
-        MyCalenderEvent calenderEvent = findViewById(R.id.calender_event);
+        calenderEvent = findViewById(R.id.calender_event);
         Date today = new Date();
         current_time = today.getTime();
         Calendar calendar = Calendar.getInstance();
