@@ -16,4 +16,5 @@
     <string name="unique_user">User already exists</string>
     <string name="enter_pass">Enter password</string>
     <string name="enter_event">Enter events</string>
+    <string name="update">Update</string>
 </resources>
