@@ -10,15 +10,19 @@ package com.calendar;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.AttributeSet;
+import android.widget.Button;
+
 import androidx.annotation.Nullable;
 import com.skyhope.eventcalenderlibrary.CalenderEvent;
 
 import java.util.Calendar;
 
 public class MyCalenderEvent extends CalenderEvent {
-
+    private Button buttonPrevious, buttonNext;
     public MyCalenderEvent(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        buttonPrevious = findViewById(com.skyhope.eventcalenderlibrary.R.id.button_previous);
+        buttonNext = findViewById(com.skyhope.eventcalenderlibrary.R.id.button_next);
         removeAll();
     }
 
@@ -35,5 +39,9 @@ public class MyCalenderEvent extends CalenderEvent {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
+    }
+    public void refresh(){
+        onClick(buttonPrevious);
+        onClick(buttonNext);
     }
 }

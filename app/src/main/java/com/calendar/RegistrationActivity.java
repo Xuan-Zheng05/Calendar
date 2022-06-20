@@ -36,12 +36,13 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // initializes shared preferences
+        // initializes shared preferences and gson
         SharedPreferences sharedPreferences = getSharedPreferences("user_pass",MODE_PRIVATE);
         Gson gson = new Gson();
 
         // gets the string using shared preferences
         String storedHashMapString = sharedPreferences.getString("user_pass", "");
+
         // checks if the file uses default value, if default, create new json file
         if (storedHashMapString.equals("")) {
             users = new HashMap<>();
@@ -63,9 +64,12 @@ public class RegistrationActivity extends AppCompatActivity {
         confirm_pass = findViewById(R.id.confirm_password);
         Button submit = findViewById(R.id.submit);
 
+        // user presses submit button
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // initialized variables
                 Gson gson = new Gson();
                 String username_string = username.getText().toString();
                 String pass_string = password.getText().toString();
