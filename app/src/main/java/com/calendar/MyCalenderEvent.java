@@ -13,14 +13,18 @@ import android.util.AttributeSet;
 import androidx.annotation.Nullable;
 import com.skyhope.eventcalenderlibrary.CalenderEvent;
 
+import java.util.Calendar;
+
 public class MyCalenderEvent extends CalenderEvent {
 
     public MyCalenderEvent(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        removeAll();
     }
 
     public MyCalenderEvent(Context context) {
         super(context);
+        removeAll();
     }
 
     /**

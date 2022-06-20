@@ -15,6 +15,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,15 +32,18 @@ import java.util.TimeZone;
 public class CalendarActivity extends AppCompatActivity {
 
     // initialized variables
-    private HashMap<String, HashMap<String, String>> events = new HashMap<>();
+    private HashMap<Long, String> events = new HashMap<>();
     private String name = "";
-    private static final String TAG = "CalenderTest";
+    private long current_time;
+    private EditText event_text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        event_text = findViewById(R.id.event_text);
         // sets the top text to display current username
         TextView display_name = findViewById(R.id.username_display);
         Bundle extras = getIntent().getExtras();
@@ -52,9 +56,6 @@ public class CalendarActivity extends AppCompatActivity {
         MyCalenderEvent calenderEvent = findViewById(R.id.calender_event);
         Calendar calendar = Calendar.getInstance();
 
-        // removes all events on the calendar page
-        calenderEvent.removeAll();
-
         // code runs every time the user clicks on a new date
         calenderEvent.initCalderItemClickCallback(new CalenderDayClickListener() {
             @Override
@@ -62,6 +63,11 @@ public class CalendarActivity extends AppCompatActivity {
                 Toast.makeText(CalendarActivity.this, dayContainerModel.getDate(), Toast.LENGTH_SHORT).show();
                 Event event = new Event(dayContainerModel.getTimeInMillisecond(), "o", Color.RED);
                 calenderEvent.addEvent(event);
+
+                String event_text_string = event_text.getText().toString();
+                current_time = dayContainerModel.getTimeInMillisecond();
+                events.put(current_time, event_text_string);
+
             }
         });
     }

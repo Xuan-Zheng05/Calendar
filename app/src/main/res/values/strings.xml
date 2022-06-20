@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Calendar</string>
     <string name="sign_in_desc">stock_image_user</string>
     <string name="username">User name:</string>

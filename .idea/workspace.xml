@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/calendar/CalendarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/calendar/CalendarActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/calendar/MyCalenderEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/calendar/MyCalenderEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +164,21 @@
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
           <line>607</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
