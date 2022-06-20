@@ -13,14 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac4926e-3ad3-4ef7-b26f-5bc15a4dcd1e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/calendar/MyCalenderEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/calendar/CalendarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/calendar/CalendarActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_calendar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +38,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="2AEHiWrsH8FXHcSbN2Cd2iwqwmR" />
   <component name="ProjectViewState">
@@ -56,6 +55,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/Users/xuanzheng/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java_CalenderEvent_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-view/Users/xuanzheng/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java_SELECTED" value="CalenderEvent" />
     <property name="android-custom-view/Users/xuanzheng/Library/Android/sdk/sources/android-32/android/widget/CalendarView.java_CalendarView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-view/Users/xuanzheng/Library/Android/sdk/sources/android-32/android/widget/CalendarView.java_SELECTED" value="CalendarView" />
     <property name="cidr.known.project.marker" value="true" />
@@ -153,5 +154,22 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
+          <line>607</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mahimrocky/EventCalender/v1.0.0/9fabffe2345cdc24d78607b15307228d02422130/EventCalender-v1.0.0-sources.jar!/com/skyhope/eventcalenderlibrary/CalenderEvent.java</url>
+          <line>606</line>
+          <properties class="com.skyhope.eventcalenderlibrary.CalenderEvent" method="addEvent" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
