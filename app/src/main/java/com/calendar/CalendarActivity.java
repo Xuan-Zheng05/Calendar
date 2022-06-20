@@ -40,12 +40,6 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
-        // clears the calendar of events
-        SharedPreferences sharedPreferences = this.getSharedPreferences("EventCalender", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.apply();
-
         // sets the top text to display current username
         TextView display_name = findViewById(R.id.username_display);
         Bundle extras = getIntent().getExtras();
@@ -54,9 +48,14 @@ public class CalendarActivity extends AppCompatActivity {
         }
         display_name.setText(name);
 
-        // initializes CalendarEvent
+        // initializes MyCalendarEvent
         MyCalenderEvent calenderEvent = findViewById(R.id.calender_event);
         Calendar calendar = Calendar.getInstance();
+
+        // removes all events on the calendar page
+        calenderEvent.removeAll();
+
+        // code runs every time the user clicks on a new date
         calenderEvent.initCalderItemClickCallback(new CalenderDayClickListener() {
             @Override
             public void onGetDay(DayContainerModel dayContainerModel) {
@@ -65,6 +64,5 @@ public class CalendarActivity extends AppCompatActivity {
                 calenderEvent.addEvent(event);
             }
         });
-        //calendar.add(Calendar.DAY_OF_MONTH, 1);
     }
 }

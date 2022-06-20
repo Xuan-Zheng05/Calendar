@@ -29,7 +29,7 @@
     </LinearLayout>
 
     <!-- event library to show all the days of the month -->
-    <com.skyhope.eventcalenderlibrary.CalenderEvent
+    <com.calendar.MyCalenderEvent
         android:id="@+id/calender_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
