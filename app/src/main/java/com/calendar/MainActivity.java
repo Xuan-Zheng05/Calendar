@@ -34,18 +34,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // initializes shared preferences
+        // initializes shared preferences and gson
         SharedPreferences sharedPreferences = getSharedPreferences("user_pass",MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
 
-        // gets the string using shared preferences
+        // gets string of usernames and passwords using shared preferences
         String storedHashMapString = sharedPreferences.getString("user_pass", "");
+
         // checks if the file uses default value, if default, create new json file
         if (storedHashMapString.equals("")) {
             users = new HashMap<>();
 
-            // if not blank, then use gson to convert the string value into a hashmap
+            // if not blank, then use gson to convert the string value into a hashmap and save it
+            // into users
         } else {
             java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>(){}.getType();
             users = gson.fromJson(storedHashMapString, type);
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // initialized variables
+        // assigned values to variables
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         Button log_in = findViewById(R.id.log_in);
@@ -70,14 +72,14 @@ public class MainActivity extends AppCompatActivity {
                 String username_string = username.getText().toString();
                 String pass_string = password.getText().toString();
 
-                // checks if username is found
+                // checks if username is in users
                 if (users.containsKey(username_string)) {
                     // checks if password is correct
                     if (pass_string.equals(users.get(username_string))) {
                         // switch to calendar activity
                         switchToCalendar();
                     } else {
-                        // print text if password is incorrect
+                        // password incorrect
                         Toast.makeText(getApplicationContext(),R.string.incorrect_pass, Toast.LENGTH_SHORT).show();
                     }
                 } else {
