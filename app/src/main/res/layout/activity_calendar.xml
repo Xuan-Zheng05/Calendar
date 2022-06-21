@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Name: Xuan
+Date: 06/10/2022
+Description: Calendar page layout program
+-->
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,19 +23,20 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp" >
 
+        <!--displays username at the top of the calendar -->
         <TextView
             android:id="@+id/username_display"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="June 2022"
+            android:text="Placeholder"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
     </LinearLayout>
 
-    <!-- event library to show all the days of the month -->
+    <!-- place calendar -->
     <com.calendar.MyCalenderEvent
         android:id="@+id/calender_event"
         android:layout_width="match_parent"
@@ -41,6 +49,8 @@
         android:layout_marginTop="5dp"
         android:layout_weight="1" >
 
+        <!--the text displaying the events the user has set and allows
+            user to set more events -->
         <EditText
             android:id="@+id/event_text"
             android:layout_width="match_parent"
@@ -55,9 +65,9 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
-         >
+        android:layout_marginBottom="20dp" >
 
+        <!-- update button -->
         <Button
             android:id="@+id/update"
             android:layout_width="150dp"
@@ -66,6 +76,5 @@
             android:textSize="12sp" />
 
     </LinearLayout>
-
 
 </LinearLayout>

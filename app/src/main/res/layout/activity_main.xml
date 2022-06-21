@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-Name: Xuan Yifei
+Name: Xuan
 Date: 06/06/2022
 Description: Login page layout program
 -->
@@ -20,6 +20,7 @@ Description: Login page layout program
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Sets the image of the stock photo -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -31,6 +32,7 @@ Description: Login page layout program
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Sets User name: text -->
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -39,6 +41,7 @@ Description: Login page layout program
                 android:text="@string/username"
                 android:textColor="@color/black" />
 
+            <!-- EditText to allow the user to enter their username -->
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
@@ -55,6 +58,7 @@ Description: Login page layout program
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Set Password: text -->
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
@@ -63,6 +67,7 @@ Description: Login page layout program
                 android:text="@string/password"
                 android:textColor="@color/black" />
 
+            <!-- EditText to allow the user to enter their password -->
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
@@ -75,6 +80,7 @@ Description: Login page layout program
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <!-- Button to log in -->
         <Button
             android:id="@+id/log_in"
             android:layout_width="200dp"
@@ -86,6 +92,7 @@ Description: Login page layout program
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <!-- Button for new user and switch to registration page -->
     <Button
         android:id="@+id/new_user"
         android:layout_width="100dp"
