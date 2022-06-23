@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             users = gson.fromJson(storedHashMapString, type);
         }
     }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
